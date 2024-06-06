@@ -1,0 +1,291 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* 
+
+import font
+
+:root 
+resets */ 
+
+:root {
+    /* Text */
+--Pale-Violet : hsl(276, 100%, 81%);  /* (sub-heading at the top of the app UI) */ 
+--Moderate-Violet : hsl(276, 55%, 52%);  /* (chat on the left)*/
+--Desaturated-DarkViolet : hsl(271, 15%, 43%); /*(chat on the right)  */
+--Grayish-Blue : hsl(206, 6%, 79%); /*(placeholder text)  */
+--VeryDark-Desaturated-Violet : hsl(271, 36%, 24%); /* (main heading) */
+--DarkGrayish-Violet :hsl(270, 7%, 64%); /* (paragraph) */
+
+
+/* Linear gradients */
+
+--LightMagenta: hsl(293, 100%, 63%);
+--LightViolet: hsl(264, 100%, 61%);
+/* Secondary*/
+
+--White: hsl(0, 0%, 100%);
+--LightGrayish-Violet : hsl(270, 20%, 96%); /* (app background) */
+--VeryDark-DesaturatedViolet : hsl(271, 36%, 24%); /* (submit button background) */
+--VeryLight-Magenta: hsl(289, 100%, 72%);/* (radio button outline) */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+body {
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  display: grid;
+  gap: 1rem;
+  place-content: center;
+  padding: 1rem;
+  background-color: var(--LightGrayish-Violet);
+  position: relative;
+}
+
+.bg-violet {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  bottom: 25vh;
+  border-radius: 0 0 1000px 0;
+  background-image: linear-gradient(to top, var(--LightViolet), var(--LightMagenta));
+}
+.bg-pinkish {
+  z-index: -1;
+  position: fixed;
+  bottom: 0;
+  top: 25vh;
+  width: 50vw;
+  right: 0;
+  border-radius: 1000px 0 0  0;
+  background-color: rgba(221, 192, 255, 0.219);
+}
+.chat-box {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+
+}
+.content {
+  border-radius: 1rem;
+  background-color: var(--LightGrayish-Violet);
+  display: grid;
+  gap: 0.6rem;
+ 
+}
+
+.profile-bar {
+  border-radius: 1rem 1rem 0rem 0rem ;
+  background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  padding-top: 1.5rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+ 
+}
+
+.whitediv {
+  position: absolute;
+  background-color: var(--White);
+  border-radius: 2rem;
+  top: -0.6rem;
+  bottom: 3.2rem;
+  right: 4rem;
+  left: 4rem;
+  
+  
+}
+.profile-left {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  
+}
+.profile-left i,
+.profile-right i {
+  color: var(--White);
+  font-size: 1rem;
+}
+
+.profile-img img {
+  width: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+}
+
+.profile-infos {
+  display: grid;
+  gap: 0.1rem;
+}
+.profile-name {
+  color: var(--White);
+  font-weight: 500 ;
+  font-size: 1rem;
+}
+
+.profile-status {
+  color: var(--Pale-Violet);
+  font-size: 0.7rem;
+}
+
+.convo {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.4rem;
+ 
+}
+.text-left,
+.text-right,
+.fees-box {
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  border-bottom-left-radius: 0.4rem;
+}
+.text-left {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  line-height: 1.2;
+  color: var(--Moderate-Violet);
+  background-color: hsl(276, 100%, 81%, 0.2);
+  font-size: 0.7rem;
+  max-width: 60%;
+}
+
+.pictures {
+  display: flex;
+  justify-content: end;
+  gap: 0.4rem;
+}
+.pictures img {
+  border-radius: 0.6rem ;
+  width: 50px ;
+}
+
+.text-right {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.7rem;
+  max-width: 60%;
+  line-height: 1.2;
+  background-color: var(--White);
+  color: var(--VeryDark-DesaturatedViolet);
+  place-self: end;
+  
+}
+
+.fees-box {
+  background-image: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  padding: 0.5rem;
+  max-width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--White);
+}
+.fees-box div {
+  display: flex;
+  gap: 0.5rem;
+}
+.fees-box i {
+ color: var(--VeryLight-Magenta);
+}
+.fees-box p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+.fees-box span {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+form {
+ position: relative;
+  background-color: var(--White);
+  border-radius: 1rem;
+  padding: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+form input {
+  border: none;
+  color: var(--Grayish-Blue);
+  width: 90%;
+}
+form button {
+  cursor: pointer;
+  position: absolute;
+  right: 0.8rem;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  padding: 0.6rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--VeryDark-DesaturatedViolet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form button i {
+  color: var(--White);
+  font-size: 1rem;
+}
+.text {
+  text-align: center;
+}
+.text h1 {
+  margin-bottom: 1rem;
+  color: var(--VeryDark-Desaturated-Violet);
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.text p {
+  color: var(--DarkGrayish-Violet);
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 900.1px) {
+  main {
+    max-width: 1000px;
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  .chat-box {
+    flex: 30%;
+  }
+  .text {
+    flex: 70%;
+    align-self: center;
+  }
+  
+}
